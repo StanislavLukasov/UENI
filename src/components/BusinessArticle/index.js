@@ -175,7 +175,11 @@ export default class BusinessArticle extends Component {
                     this.props.mobile && this.styles.imageCopyContainerMobile)}>
                     
                     {this.props.image &&
-                        <div>
+                        <div style={Object.assign({},
+                            this.styles.imageContainer,
+                            this.props.displayHeroImage && this.styles.imageContainerHero,
+                            this.props.mobile && this.styles.imageContainerSmall)}>
+                            
                             <div style={Object.assign({},
                                 this.styles.image,
                                 this.props.displayHeroImage && this.styles.imageHero,

@@ -1,3 +1,5 @@
+'use strict';
+import "babel-polyfill"
 import React, { Component } from 'react'
 import styles from './styles'
 import Settings from '../../components/Settings'

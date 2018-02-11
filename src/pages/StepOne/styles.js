@@ -13,6 +13,7 @@ export default function styles(props = {}) {
 			width: '50%',
 			display: 'flex',
 			alignItems: 'center',
+			WebkitAlignItems: 'center',
 			padding: '0 1rem 0 0'
 		},
 		headerTitleSmall: {
@@ -33,6 +34,7 @@ export default function styles(props = {}) {
 		sortContainer: {
 			display: 'flex',
 			alignItems: 'center',
+			WebkitAlignItems: 'center',
 			width: '100%'
 		},
 		sort: {
@@ -63,9 +65,8 @@ export default function styles(props = {}) {
 			borderRadius: 0
 		},
 		articles: {
-			display: 'flex',
-			flexWrap: 'wrap',
-			//flexDirection: 'row',
+			//display: 'table',
+			//flexWrap: 'wrap',
 			width: '100%',
 			margin: '-2rem 0 0 0'
 		},
@@ -73,6 +74,7 @@ export default function styles(props = {}) {
 			display: 'block'
 		},
 		article: {
+			display: 'inline-block',
 			width: '50%',
 			margin: '2rem 0 0 0'
 		},

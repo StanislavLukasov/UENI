@@ -8,6 +8,16 @@ export default function styles(props = {}) {
 		imageCopyContainer: {
 			display: 'flex',
 		},
+		imageContainer: {
+			width: '7rem',
+		},
+		imageContainerHero: {
+			width: '20rem',
+			flex: 1
+		},
+		imageContainerSmall: {
+			maxWidth: '8rem',
+		},
 		image: {
 			width: '7rem',
 			height: '7rem',
@@ -15,19 +25,20 @@ export default function styles(props = {}) {
 			backgroundSize: 'cover'
 		},
 		imageHero: {
-			width: '20rem',
+			width: '100%',
 			height: '20rem',
 		},
 		imageSmall: {
-			maxWidth: '8rem',
 			maxHeight: '8rem',
 			margin: 0
 		},
 		content: {
+			width: 'calc(100% - 7rem)',
 			margin: '0 0 0 1rem',
 			position: 'relative'
 		},
 		contentHero: {
+			width: 'calc(100% - 20rem)',
 			margin: '0 0 0 4rem'
 		},
 		title: {
@@ -54,7 +65,7 @@ export default function styles(props = {}) {
     		textOverflow: 'ellipsis',
     		display: '-webkit-box',
 			lineHeight: 1.5,
-			maxHeight: '4.5rem',
+			maxHeight: '4rem',
 			WebkitLineClamp: 3,
 			WebkitBoxOrient: 'vertical'
 		},

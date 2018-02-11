@@ -14,7 +14,10 @@ export default function styles(props = {}) {
 		height: props.height || '4rem',
 		display: props.display || 'flex',
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		textAlign: 'center',
+		WebkitAlignItems: 'center',
+		WebkitJustifyContent: 'center',
 	}
 	
 	const prefixer = new Prefixer()

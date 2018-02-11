@@ -5,7 +5,7 @@ let CompressionPlugin = require('compression-webpack-plugin');
 
 let options = {
     entry: {
-        bundle: ['babel-polyfill', './src/entry']
+        bundle: './src/entry'
     },
     devServer: {
         inline: true,

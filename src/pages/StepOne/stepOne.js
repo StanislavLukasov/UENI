@@ -1,4 +1,7 @@
+'use strict';
+import "babel-polyfill"
 import React, { Component } from 'react'
+import 'isomorphic-fetch'
 import styles from './styles'
 import Settings from '../../components/Settings'
 import BoxNumber from '../../components/BoxNumber'
