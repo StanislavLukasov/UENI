@@ -93,13 +93,13 @@ export default class BusinessArticle extends Component {
     *
     * @return DOM elements
     */
-    renderLink(text) {        
+    renderLink() {        
         if(!this.props.displayRatingAndCategory) {
             return (            
                 <Link 
                     to={this.props.href}
                     style={this.styles.button}>
-                    {text}
+                    {this.props.buttonText}
                 </Link>
             )
         }
@@ -111,10 +111,52 @@ export default class BusinessArticle extends Component {
                     style={Object.assign({}, 
                         this.styles.button,
                         !this.props.mobile && this.styles.buttonAbsolute)}>
-                    {text}
+                    {this.props.buttonText}
                 </a>
             )
         }
+    }
+    
+    /**
+    * Renders button
+    *
+    * @return DOM elements
+    */
+    renderButtonInsideContainer() {
+        let result = false
+        
+        if((this.props.displayRatingAndCategory && !this.props.mobile)) {
+            result = true
+        }
+        
+        if(result) {
+            return this.renderLink()
+        }
+        
+        return false
+    }
+    
+    /**
+    * Renders button
+    *
+    * @return DOM elements
+    */
+    renderButtonOutsideContainer() {
+        let result = false
+        
+        if((this.props.href && !this.props.displayHeroImage)) {
+            result = true
+        }
+        
+        if((this.props.href && this.props.displayHeroImage && this.props.mobile)) {
+            result = true
+        }
+        
+        if(result) {
+            return this.renderLink()
+        }
+        
+        return false
     }
     
     /**
@@ -184,16 +226,12 @@ export default class BusinessArticle extends Component {
                                 }
                             </div>
                         }
-                        
-                        {this.props.displayRatingAndCategory &&
-                            this.renderLink('Submit')
-                        }
+
+                        {this.renderButtonInsideContainer()}
                     </div>
                 </div>
                 
-                {(this.props.href && !this.props.displayHeroImage) &&                    
-                    this.renderLink('Continue')
-                }
+                {this.renderButtonOutsideContainer()}
             </div>
         )
     }

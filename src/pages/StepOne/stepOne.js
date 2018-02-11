@@ -374,6 +374,7 @@ export default class StepOne extends Component {
 									location={this.formatLocation(item.city, item.country)}
 									description={item.description}
 									href={"/business/"+item.id}
+									buttonText="Continue"
 									tablet={isBreakpointMedium(this.props.breakpoint)}
 									mobile={isBreakpointSmall(this.props.breakpoint)}
 								/>

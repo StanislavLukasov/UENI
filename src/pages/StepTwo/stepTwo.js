@@ -286,6 +286,7 @@ export default class StepTwo extends Component {
 							category={category}
 							displayRatingAndCategory={true}
 							displayHeroImage={true}
+							buttonText="Submit"
 							tablet={isBreakpointMedium(this.props.breakpoint)}
 							mobile={isBreakpointSmall(this.props.breakpoint)}
 						/>

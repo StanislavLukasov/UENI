@@ -19,7 +19,8 @@ describe('BusinessArticle component', () => {
             description: 'Description',
             href: 'link',
             rating: 5,
-            category: 'Builders'
+            category: 'Builders',
+            buttonText: 'Continue'
         }
         
         wrapper.setProps(props)
@@ -40,7 +41,7 @@ describe('BusinessArticle component', () => {
         let description = wrapper.find('p').text();
         expect(description).to.equal(props.description);
         
-        let button = wrapper.find('Link').text();
+        let button = wrapper.find('a').text();
         expect(button).to.equal('Continue');
     });
     
